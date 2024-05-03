@@ -1,5 +1,5 @@
 
-<?php include('partials-front/menu.php'); ?>
+<?php include('includes/menu.php'); ?>
 
     <?php 
         //CHeck whether food id is set or not
@@ -17,7 +17,7 @@
             //CHeck whether the data is available or not
             if($count==1)
             {
-                //WE Have DAta
+                
                 //GEt the Data from Database
                 $row = mysqli_fetch_assoc($res);
 
@@ -27,7 +27,7 @@
             }
             else
             {
-                //Food not Availabe
+                
                 //REdirect to Home Page
                 header('location:'.SITEURL);
             }
@@ -168,4 +168,4 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
