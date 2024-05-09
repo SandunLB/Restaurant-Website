@@ -86,7 +86,7 @@
                                 <tr>
                                     <td><?php echo $sn++; ?>. </td>
                                     <td><?php echo $title; ?></td>
-                                    <td>$<?php echo $price; ?></td>
+                                    <td>Rs.<?php echo $price; ?></td>
                                     <td>
                                         <?php  
                                             //CHeck whether we have image or not
@@ -99,7 +99,7 @@
                                             {
                                                 //WE Have Image, Display Image
                                                 ?>
-                                                <img src="../images/food/" width="100px">
+                                                <img src="../images/food/<?php echo  $image_name; ?>" width="100px">
                                                 <?php
                                             }
                                         ?>
