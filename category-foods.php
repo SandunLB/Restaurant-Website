@@ -1,5 +1,5 @@
     
-    <?php include('partials-front/menu.php'); ?>
+    <?php include('includes/header.php'); ?>
 
     <?php 
         //CHeck whether id is passed or not
@@ -22,7 +22,7 @@
         {
             //CAtegory not passed
             //Redirect to Home page
-            header('location:'.SITEURL);
+            header('location:');
         }
     ?>
 
@@ -80,7 +80,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
@@ -95,7 +95,7 @@
                                 </p>
                                 <br>
 
-                                <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                                <a href="order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
 
@@ -121,4 +121,4 @@
     </section>
     <!-- fOOD Menu Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>

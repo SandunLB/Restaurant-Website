@@ -4,11 +4,16 @@
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
+            <?php 
+
+                //Get the Search Keyword
+                // $search = $_POST['search'];
+                $search = mysqli_real_escape_string($conn, $_POST['search']);
             
-            <form action="food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
-            </form>
+            ?>
+
+
+            <h2>Foods on Your Search <a href="#" class="text-white">"<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>
@@ -22,33 +27,36 @@
             <h2 class="text-center">Food Menu</h2>
 
             <?php 
-                //Display Foods that are Active
-                $sql = "SELECT * FROM tbl_food WHERE active='Yes'";
+
+                //SQL Query to Get foods based on search keyword
+                //$search = burger '; DROP database name;
+                // "SELECT * FROM tbl_food WHERE title LIKE '%burger'%' OR description LIKE '%burger%'";
+                $sql = "SELECT * FROM tbl_food WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
 
                 //Execute the Query
-                $res=mysqli_query($conn, $sql);
+                $res = mysqli_query($conn, $sql);
 
                 //Count Rows
                 $count = mysqli_num_rows($res);
 
-                //CHeck whether the foods are availalable or not
+                //Check whether food available of not
                 if($count>0)
                 {
-                    //Foods Available
+                    //Food Available
                     while($row=mysqli_fetch_assoc($res))
                     {
-                        //Get the Values
+                        //Get the details
                         $id = $row['id'];
                         $title = $row['title'];
-                        $description = $row['description'];
                         $price = $row['price'];
+                        $description = $row['description'];
                         $image_name = $row['image_name'];
                         ?>
-                        
+
                         <div class="food-menu-box">
                             <div class="food-menu-img">
                                 <?php 
-                                    //CHeck whether image available or not
+                                    // Check whether image name is available or not
                                     if($image_name=="")
                                     {
                                         //Image not Available
@@ -59,7 +67,8 @@
                                         //Image Available
                                         ?>
                                         <img src="images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
-                                        <?php
+                                        <?php 
+
                                     }
                                 ?>
                                 
@@ -82,12 +91,11 @@
                 }
                 else
                 {
-                    //Food not Available
+                    
                     echo "<div class='error'>Food not found.</div>";
                 }
-            ?>
-
             
+            ?>
 
             
 

@@ -1,5 +1,5 @@
 
-<?php include('partials-front/menu.php'); ?>
+<?php include('includes/header.php'); ?>
 
 
 
@@ -32,7 +32,7 @@
                         $image_name = $row['image_name'];
                         ?>
                         
-                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                        <a href="category-foods.php?category_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php 
                                     if($image_name=="")
@@ -44,7 +44,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <img src="images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
@@ -72,4 +72,4 @@
     <!-- Categories Section Ends Here -->
 
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>

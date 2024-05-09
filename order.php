@@ -1,5 +1,5 @@
 
-<?php include('includes/menu.php'); ?>
+<?php include('includes/header.php'); ?>
 
     <?php 
         //CHeck whether food id is set or not
@@ -29,13 +29,13 @@
             {
                 
                 //REdirect to Home Page
-                header('location:'.SITEURL);
+                header('location:');
             }
         }
         else
         {
             //Redirect to homepage
-            header('location:'.SITEURL);
+            header('location:');
         }
     ?>
 
@@ -62,7 +62,7 @@
                             {
                                 //Image is Available
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src="images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                                 <?php
                             }
                         
@@ -151,13 +151,13 @@
                     {
                         //Query Executed and Order Saved
                         $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
-                        header('location:'.SITEURL);
+                        header('location:');
                     }
                     else
                     {
                         //Failed to Save Order
                         $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
-                        header('location:'.SITEURL);
+                        header('location:');
                     }
 
                 }
