@@ -1,4 +1,3 @@
-<!-- social Section Starts Here -->
 <section class="social">
         <div class="container text-center">
             <ul>
@@ -14,15 +13,12 @@
             </ul>
         </div>
     </section>
-    <!-- social Section Ends Here -->
-
-    <!-- footer Section Starts Here -->
+   
     <section class="footer">
         <div class="container text-center">
             <p>Developed By -<a href="#">Nethmi</a></p>
         </div>
     </section>
-    <!-- footer Section Ends Here -->
 
 </body>
 </html>

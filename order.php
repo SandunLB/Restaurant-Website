@@ -52,15 +52,15 @@
                     <div class="food-menu-img">
                         <?php 
                         
-                            //CHeck whether the image is available or not
+                         
                             if($image_name=="")
                             {
-                                //Image not Availabe
+                           
                                 echo "<div class='error'>Image not Available.</div>";
                             }
                             else
                             {
-                                //Image is Available
+                           
                                 ?>
                                 <img src="images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                                 <?php
@@ -105,20 +105,20 @@
 
             <?php 
 
-                //CHeck whether submit button is clicked or not
+                
                 if(isset($_POST['submit']))
                 {
-                    // Get all the details from the form
+                  
 
                     $food = $_POST['food'];
                     $price = $_POST['price'];
                     $qty = $_POST['qty'];
 
-                    $total = $price * $qty; // total = price x qty 
+                    $total = $price * $qty; 
 
-                    $order_date = date("Y-m-d h:i:sa"); //Order DAte
+                    $order_date = date("Y-m-d h:i:sa"); 
 
-                    $status = "Ordered";  // Ordered, On Delivery, Delivered, Cancelled
+                    $status = "Ordered"; 
 
                     $customer_name = $_POST['full-name'];
                     $customer_contact = $_POST['contact'];
@@ -126,8 +126,7 @@
                     $customer_address = $_POST['address'];
 
 
-                    //Save the Order in Databaase
-                    //Create SQL to save the data
+                  
                     $sql2 = "INSERT INTO tbl_order SET 
                         food = '$food',
                         price = $price,
@@ -166,6 +165,6 @@
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+
 
     <?php include('includes/footer.php'); ?>
