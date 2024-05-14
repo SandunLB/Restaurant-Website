@@ -3,7 +3,17 @@
     padding: 0 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
 .container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+
+.container2{
+    background-color: #747d8c;
     width: 80%;
     margin: 0 auto;
     padding: 1%;
@@ -58,7 +68,7 @@ a:hover{
     background-color: #ff4757;
 }
 h2{
-    color: #2f3542;
+    color: #000000d0;
     font-size: 2rem;
     margin-bottom: 2%;
 }
@@ -91,7 +101,13 @@ fieldset{
 
 
 /* CSSS for navbar section */
-
+.navbar{
+    background: linear-gradient(135deg, #f7eab49c, #faa5d4a6);
+    background-size:auto; /* Adjust as needed */
+    background-repeat: no-repeat;
+    
+   
+}
 .logo{
     width: 10%;
     float: left;
@@ -115,7 +131,7 @@ fieldset{
 .food-search{
     background-image: url(../images/bg.jpg);
     background-size: cover;
-    height: 300px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: center;
     padding: 100px 0;
@@ -129,6 +145,26 @@ fieldset{
     border-radius: 5px;
 }
 
+
+ .about {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: #c7c7c7;
+    text-align: center;
+    animation: fadeInOut 30s linear infinite;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 /* CSS for Categories */
 .categories{

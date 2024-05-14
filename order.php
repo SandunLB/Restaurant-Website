@@ -39,9 +39,9 @@
         }
     ?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
+ 
     <section class="food-search">
-        <div class="container">
+        <div class="container2">
             
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
 
@@ -74,7 +74,7 @@
                         <h3><?php echo $title; ?></h3>
                         <input type="hidden" name="food" value="<?php echo $title; ?>">
 
-                        <p class="food-price">$<?php echo $price; ?></p>
+                        <p class="food-price">Rs.<?php echo $price; ?></p>
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
@@ -87,16 +87,16 @@
                 <fieldset>
                     <legend>Delivery Details</legend>
                     <div class="order-label">Full Name</div>
-                    <input type="text" name="full-name" placeholder="E.g. Vijay Thapa" class="input-responsive" required>
+                    <input type="text" name="full-name" placeholder="E.g. kasun perera" class="input-responsive" required>
 
                     <div class="order-label">Phone Number</div>
-                    <input type="tel" name="contact" placeholder="E.g. 9843xxxxxx" class="input-responsive" required>
+                    <input type="tel" name="contact" placeholder="E.g. 070*******" class="input-responsive" required>
 
                     <div class="order-label">Email</div>
-                    <input type="email" name="email" placeholder="E.g. hi@vijaythapa.com" class="input-responsive" required>
+                    <input type="email" name="email" placeholder="E.g. ABC@gmail.com" class="input-responsive" required>
 
                     <div class="order-label">Address</div>
-                    <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
+                    <textarea name="address" rows="10" placeholder="E.g. No:,Street, City, " class="input-responsive" required></textarea>
 
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
@@ -165,6 +165,12 @@
 
         </div>
     </section>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
 
 
     <?php include('includes/footer.php'); ?>
